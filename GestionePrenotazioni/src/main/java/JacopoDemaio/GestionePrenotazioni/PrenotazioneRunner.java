@@ -50,7 +50,7 @@ public class PrenotazioneRunner implements CommandLineRunner {
 
 
 
-//        postazioneService.searchPostazioni("PRIVATO","Oscar Ruitt").forEach(System.out::println);
+        postazioneService.searchPostazioni("PRIVATO","Oscar Ruitt").forEach(System.out::println);
 
 Utente uFromDb = utenteService.findByIdUtente(UUID.fromString("139aef69-0b1b-4061-95ff-e3aadf8a0062"));
 Postazione pFromDb = postazioneService.findById(UUID.fromString("336453d5-cd82-429e-a3eb-e00f550ea6f3"));
@@ -61,7 +61,7 @@ Postazione pFromDb = postazioneService.findById(UUID.fromString("336453d5-cd82-4
 
 
         Prenotazione p1 = new Prenotazione(uFromDb,pFromDb, LocalDate.now());
-        prenotazioneService.savePrenotazione(p1);
+//        prenotazioneService.savePrenotazione(p1);
 
 
 

@@ -41,10 +41,10 @@ public class PostazioneService {
     }
 
 
-//    public List<Postazione> searchPostazioni(String tipo, String nome){
-//        return postazioneRepository.findByTipoAndEdificio(tipo,nome);
+    public List<Postazione> searchPostazioni(String tipo, String citta){
+        return postazioneRepository.findByTipoAndCitta(tipo,citta);
 //
-//    }
+    }
 
     public List<Postazione> findAll(){
         return postazioneRepository.findAll();
