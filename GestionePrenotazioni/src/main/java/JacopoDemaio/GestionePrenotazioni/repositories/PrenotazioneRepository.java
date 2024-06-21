@@ -13,7 +13,7 @@ import java.util.UUID;
 @Repository
 public interface PrenotazioneRepository extends JpaRepository<Prenotazione, UUID> {
 
-    boolean existsByUtenteAndData(Utente utente, LocalDate data);
+    boolean existsByUtenteIdAndDataPrenotazione(Utente utenteId, LocalDate dataPrenotazione);
 
-    List<Prenotazione> findByPostazioneAndData (Postazione postazione, LocalDate data);
+    List<Prenotazione> findByPostazioneIdAndDataPrenotazione (Postazione postazioneId, LocalDate dataPrenotazione);
 }

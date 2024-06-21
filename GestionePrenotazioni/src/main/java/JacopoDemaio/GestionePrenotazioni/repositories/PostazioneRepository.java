@@ -12,6 +12,6 @@ import java.util.UUID;
 @Repository
 public interface PostazioneRepository extends JpaRepository<Postazione, UUID> {
 
-    @Query("SELECT p FROM Postazione p JOIN Edificio e ON p.Edificio = e.id WHERE p.tipo = :tipo AND e.nome = :nome")
-    List<Postazione> findByTipoAndEdificio(Tipo tipo, String nome);
+//    @Query("SELECT p FROM Postazione p JOIN Edificio e ON p.Edificio = e.id WHERE p.tipo = UPPER(:tipo) AND e.citta = :nome")
+//    List<Postazione> findByTipoAndEdificio(String tipo, String nome);
 }

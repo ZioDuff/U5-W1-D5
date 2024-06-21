@@ -20,10 +20,10 @@ public class PrenotazioneService {
 
     public void savePrenotazione(Prenotazione newPrenotazione){
 
-        if (prenotazioneRepository.existsByUtenteAndData(newPrenotazione.getUtenteId(), newPrenotazione.getDataPrenotazione())){
+        if (prenotazioneRepository.existsByUtenteIdAndDataPrenotazione(newPrenotazione.getUtenteId(), newPrenotazione.getDataPrenotazione())){
             throw new RuntimeException("L'utente " + newPrenotazione.getUtenteId().getNomeCompleto() + " Ha già una prenotazione in questa data");
         }
-        if (prenotazioneRepository.findByPostazioneAndData(newPrenotazione.getPostazioneId(), newPrenotazione.getDataPrenotazione()).size() >= newPrenotazione.getPostazioneId().getMaxPartecipanti()){
+        if (prenotazioneRepository.findByPostazioneIdAndDataPrenotazione(newPrenotazione.getPostazioneId(), newPrenotazione.getDataPrenotazione()).size() >= newPrenotazione.getPostazioneId().getMaxPartecipanti()){
             throw new RuntimeException("Capienza massima raggiunta per la postazione " + newPrenotazione.getPostazioneId().getId());
         }
 
