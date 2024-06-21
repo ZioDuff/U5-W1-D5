@@ -2,20 +2,19 @@ package JacopoDemaio.GestionePrenotazioni.entities;
 
 import JacopoDemaio.GestionePrenotazioni.enums.Tipo;
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.UUID;
 
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
 @ToString
 public class Postazione {
 
     @Id
+    @GeneratedValue
     @Setter(AccessLevel.NONE)
     private UUID id;
 

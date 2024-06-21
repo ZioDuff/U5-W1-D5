@@ -4,20 +4,19 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.UUID;
 
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
 @ToString
 public class Edificio {
 
     @Id
+    @GeneratedValue
     @Setter(AccessLevel.NONE)
     private UUID id;
 

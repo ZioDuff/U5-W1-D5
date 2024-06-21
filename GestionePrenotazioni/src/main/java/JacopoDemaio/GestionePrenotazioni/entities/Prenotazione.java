@@ -1,10 +1,7 @@
 package JacopoDemaio.GestionePrenotazioni.entities;
 
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.UUID;
@@ -12,10 +9,12 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
 @ToString
 public class Prenotazione {
 
     @Id
+    @GeneratedValue
     @Setter(AccessLevel.NONE)
     private UUID id;
 
