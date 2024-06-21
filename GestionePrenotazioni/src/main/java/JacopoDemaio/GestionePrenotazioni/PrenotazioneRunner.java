@@ -44,7 +44,11 @@ public class PrenotazioneRunner implements CommandLineRunner {
 
 
 
-//        Edificio edFromDb = edificioService.findById(UUID.fromString("873af56b-9495-45f0-8dfb-b0daa44bd0b9"));
+
+        postazioneService.searchPostazioni(Tipo.PRIVATO,"Oscar Ruitt").forEach(System.out::println);
+
+
+        Edificio edFromDb = edificioService.findById(UUID.fromString("873af56b-9495-45f0-8dfb-b0daa44bd0b9"));
 //        System.out.println(edFromDb);
 //        Postazione p1 = new Postazione("non so che scrivere", Tipo.OPEN_SPACE,80,edFromDb);
 //        postazioneService.savePostazione(p1);
